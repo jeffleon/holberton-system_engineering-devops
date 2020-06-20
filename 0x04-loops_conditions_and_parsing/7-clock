@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#This function print 10 times Holberton School
+min=0
+hour=0
+while [ $hour -le 12 ]
+do
+   echo "Hour: $hour"
+   while [ $min -lt 59 ]
+   do
+      min=$((min+1))
+      echo "$min"
+   done
+   min=0
+   hour=$((hour+1))
+done
