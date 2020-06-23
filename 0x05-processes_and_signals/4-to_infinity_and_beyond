@@ -5,5 +5,4 @@ while [ $x ]
 do
     sleep 2
     echo 'To infinity and beyond'
-    x=$((x+1))
 done
