@@ -1,1 +1,10 @@
 #!/usr/bin/env bash
+#use of trap
+x=1
+trap 'echo "I am invicible!!!"' SIGTERM
+while [ $x ]
+do
+    echo 'To infinity and beyond'
+    sleep 2
+    x=$((x+1))
+done
