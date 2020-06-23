@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-#infinity to beyond
+# infinity to beyond
 x=1
 while [ $x ]
 do
-    sleep 2
     echo 'To infinity and beyond'
+    sleep 2
+    x=$((x+1))
 done
