@@ -2,6 +2,7 @@
 #This function print 10 times Holberton School
 min=0
 hour=0
+
 while [ $hour -le 12 ]
 do
    echo "Hour: $hour"

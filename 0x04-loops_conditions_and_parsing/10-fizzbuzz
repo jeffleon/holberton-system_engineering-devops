@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #This function print 10 times Holberton School
+num=0
 for num in {1..100}
 do
    if [[ $((num%3)) -eq 0 && $((num%5)) -eq 0 ]];then
