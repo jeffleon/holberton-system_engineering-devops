@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Netcat port 98 listen in localhost.
+
+sudo nc -l 98
