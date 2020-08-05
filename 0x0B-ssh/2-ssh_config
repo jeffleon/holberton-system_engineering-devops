@@ -1,0 +1,6 @@
+# connect without a password
+Host 1527-web-01
+User ubuntu
+HostName 104.196.60.146
+IdentityFile ~/.ssh/holberton
+PasswordAuthentication no
