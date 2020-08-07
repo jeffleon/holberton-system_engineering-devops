@@ -1,0 +1,4 @@
+#!/bin/usr/env bash
+# fix the server
+
+service apache2 start
