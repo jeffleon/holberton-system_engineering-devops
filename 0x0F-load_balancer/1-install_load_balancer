@@ -11,8 +11,8 @@ mode http
 default_backend http_back
 backend http_back
 balance roundrobin
-server 1527-web-01 104.196.60.146:80 check
-server 1527-web-02 35.196.4.21:80 check
+server gc-1527-web-01-1596572377 104.196.60.146:80 check
+server gc-1527-web-02-1597381948 35.196.4.21:80 check
 ">> /etc/haproxy/haproxy.cfg
 sudo service haproxy start
 
