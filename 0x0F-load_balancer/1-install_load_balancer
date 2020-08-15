@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#Install ngnix on your web-01 server
+
+apt-get install -y software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-1.8
+apt-get -y update
+apt-get -y install haproxy=1.8
+echo "frontend http_front
+bind *:80
+mode http
+default_backend http_back
+backend http_back
+balance roundrobin
+server 1527-web-01 104.196.60.146 check
+server 1527-web-02 35.196.4.21 check
+">> /etc/haproxy/haproxy.cfg
+sudo service haproxy start
+
