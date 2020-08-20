@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# send data
+www1="www"
+lb01="lb-01"
+web1="web-01"
+web2="web-02"
+if [ -n "$2" ]; then
+    costum=$(dig "$2.$1" | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print $5}')
+    echo "The subdomain $2 is a A record and points to $costum"
+else
+    dig "$www1.$1" | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print "The subdomain www is a A record and points to " $5}'
+    dig "$lb01.$1" | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print "The subdomain lb-01 is a A record and points to " $5}'
+    dig "$web1.$1" | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print "The subdomain web-01 is a A record and points to " $5}'
+    dig "$web2.$1" | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print "The subdomain web-02 is a A record and points to " $5}'
+fi
