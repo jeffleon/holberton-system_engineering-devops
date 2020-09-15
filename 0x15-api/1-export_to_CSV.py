@@ -3,7 +3,7 @@
 import csv
 import requests
 from sys import argv
- 
+
 
 if __name__ == "__main__":
     """ Print Tasks """
@@ -24,9 +24,9 @@ if __name__ == "__main__":
     TasksDict = []
     for task in Tasks:
         TasksDict.append({'name': name,
-                           'id': argv[1],
-                           'completed': task['completed'],
-                           'title': task['title']})
+                          'id': argv[1],
+                          'completed': task['completed'],
+                          'title': task['title']})
     with open('{}.csv'.format(argv[1]), mode='w') as fd:
         fnames = ['id', 'name', 'completed', 'title']
         writer = csv.DictWriter(fd, fieldnames=fnames, quotechar='"',
