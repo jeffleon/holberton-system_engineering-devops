@@ -8,7 +8,7 @@ def number_of_subscribers(subreddit):
     """ function to find a subredict """
     url = "https://www.reddit.com/api/search_subreddits.json"
     headers = {'User-Agent': 'Mozilla/5.0'}
-    data = {"query": subreddits}
+    data = {"query": subreddit}
     response = requests.post(url, headers=headers, data=data)
     try:
         results = response.json()
