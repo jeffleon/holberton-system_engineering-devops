@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ function to find a subredict """
-from sys import argv
 import requests
 
 
@@ -10,8 +9,9 @@ def number_of_subscribers(subreddit):
     headers = {'User-Agent': 'Mozilla/5.0'}
     data = {"query": subreddit}
     response = requests.post(url, headers=headers, data=data)
-    try:
+    if response.status_code == 200:
         results = response.json()
         return results['subreddits'][0]['subscriber_count']
-    except(e):
+    else:
         return 0
+
