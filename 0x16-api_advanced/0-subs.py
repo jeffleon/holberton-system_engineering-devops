@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """ function to find a subredict """
 from sys import argv
 import requests

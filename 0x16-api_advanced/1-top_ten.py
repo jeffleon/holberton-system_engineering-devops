@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """ function that allow do a request in reddit to obtein titles"""
 from sys import argv
 import requests

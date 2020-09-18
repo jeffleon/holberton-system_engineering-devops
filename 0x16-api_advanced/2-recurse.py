@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """ Create a function that allow a pagination"""
 from sys import argv
 import requests
