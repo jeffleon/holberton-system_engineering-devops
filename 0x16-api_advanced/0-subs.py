@@ -12,6 +12,6 @@ def number_of_subscribers(subreddit):
     response = requests.post(url, headers=headers, data=data)
     try:
         results = response.json()
-        print(results['subreddits'][0]['subscriber_count'])
+        return results['subreddits'][0]['subscriber_count']
     except(e):
-        print(0)
+        return 0
